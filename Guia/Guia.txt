@@ -52,3 +52,8 @@ Neste momento precisa precisamos dizer pra o composer que houve uma modificaçao
  composer dump-autoload
 
 teste no index utilizando a classes sql() tentando trazer os usuarios e veja se funcionou
+
+CLASSE PAGE PARA O TAMPLATE
+
+#1 dentro de hcodebr/php-classes/src
+crio minha classe Page.php
