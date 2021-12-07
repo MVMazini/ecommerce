@@ -1,0 +1,54 @@
+Guia
+
+CONFIGURANDO O PROJETO
+
+#1Crie uma pasta com o  nome do Projeto ex myecommerce
+e crie o arquivos 
+
+composer.json
+hosts
+httpd-vhosts.conf
+index.php
+README.MD
+
+#2Configure o arquivo composer.json
+adicone suas dependencias
+altere a dependencia:
+"autoload":{
+	 "psr-4":{
+	   " de um nome" : "vendor"\\nome\\php-classes\\src
+	 }
+}
+
+no Git bash de o comando : composer update: neste momento ira baixar todas as suas depencias para o seu projeto.
+
+#3criando um dominio virtual dentro do computador 
+
+1º arquivo
+Abra o arquivo hosts
+copie a linha com do hosts ex 127.0.0.1 www.hcodecomerce.com.br
+
+cole em : c:/system32/drives/etc/hosts
+atenção : dentro do arquivo hosts se encontra todos os redirecionamentos de hosts
+
+2º arquivo
+Abra o arquivo httpd-vhosts.conf
+copie o arquivo
+
+cole em : c:/xammp/apche/conf/extra/ httpd-vhosts.conf
+cole no final do script 
+altere o caminho do projeto em DocumentRoot e Directory
+
+Feito isso reinicie o servidor web
+
+abra  o browser e digite o endereço que vc cadastro no host www.hcodecomerce.com.br, se funcionar ira redirecionar para o index que conterar a estrutura inicial do projeto ja com o utilizando o slim 
+
+CONFIGURANDO O AUTOLOAD DAS NOSSAS CLASSES
+
+#1 copie e cole a pasta htcodebr para dentro do seu vendor (altere o nome da pasta se necessaria)
+
+Neste momento precisa precisamos dizer pra o composer que houve uma modificaçao para gerar novamente o autoload portanto abra o gitbash e de o comando:
+
+ composer dump-autoload
+
+teste no index utilizando a classes sql() tentando trazer os usuarios e veja se funcionou
